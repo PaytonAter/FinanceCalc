@@ -1,6 +1,6 @@
-rate = int(input("Enter hourly rate: "))
-
 earnings = int(input("Enter hours worked this week: "))
+
+rate = int(input("Enter what you make per hour: "))
 
 rent = int(input("Enter what you pay for monthly rent: "))
 
@@ -41,7 +41,7 @@ else:
     ot_earnings = earnings-40
 base_earnings = earnings-ot_earnings
 ot_rate = rate*1.5
-print("Your earnings will be: ~",
+print("Your earnings per week will be: ~",
       ((rate*base_earnings)+(ot_rate*ot_earnings))*tax_bracket)
-print("After rent, you'll be left with: ", ((rate*base_earnings) +
+print("After rent, you'll be left with per week: ", ((rate*base_earnings) +
       (ot_rate*ot_earnings))*tax_bracket - weekly_rent)
