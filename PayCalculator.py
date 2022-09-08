@@ -2,6 +2,10 @@ rate = int(input("Enter hourly rate: "))
 
 earnings = int(input("Enter hours worked this week: "))
 
+rent = int(input("Enter monthly rent: "))
+
+weekly_rent = rent/4
+
 weekly_gross_pay = (rate*earnings)
 
 tax_ten = .90
@@ -29,6 +33,8 @@ else:
 
 if earnings <= 40:
     print("Your earning will be: ~", (weekly_gross_pay)*tax_bracket)
+    print("After rent, you'll be left with: ",
+          ((weekly_gross_pay*tax_bracket) - weekly_rent))
     exit()
 
 else:
@@ -37,3 +43,5 @@ base_earnings = earnings-ot_earnings
 ot_rate = rate*1.5
 print("Your earnings will be: ~",
       ((rate*base_earnings)+(ot_rate*ot_earnings))*tax_bracket)
+print("After rent, you'll be left with: ", ((rate*base_earnings) +
+      (ot_rate*ot_earnings))*tax_bracket - weekly_rent)
