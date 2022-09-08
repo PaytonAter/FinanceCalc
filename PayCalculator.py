@@ -2,7 +2,7 @@ rate = int(input("Enter hourly rate: "))
 
 earnings = int(input("Enter hours worked this week: "))
 
-rent = int(input("Enter monthly rent: "))
+rent = int(input("Enter what you pay for monthly rent: "))
 
 weekly_rent = rent/4
 
